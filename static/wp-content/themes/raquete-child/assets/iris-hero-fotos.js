@@ -100,17 +100,6 @@
       });
     }
 
-    /* Reinicia a animação sem quadro em branco: .is-holding reusa
-       a rede 05g (.is-active / first-child) enquanto animation:none. */
-    function restartAligned() {
-      root.classList.add('is-holding');
-      figures.forEach(function (fig) { fig.style.animation = 'none'; });
-      void root.offsetWidth;
-      figures.forEach(function (fig) { fig.style.animation = ''; });
-      alignDelays();
-      root.classList.remove('is-holding');
-    }
-
     function setPauseUi(paused) {
       btnPause.setAttribute('aria-pressed', paused ? 'true' : 'false');
       btnPause.setAttribute('aria-label', paused ? 'Retomar' : 'Pausar');
@@ -119,24 +108,32 @@
     function enterManual(i) {
       setActive(i);
       alignDelays();
+      root.classList.remove('is-playing');
       root.classList.add('is-paused');
       setPauseUi(true);
     }
 
     function resumeAuto() {
-      // Confirma .is-active na foto que estava/está visível.
+      // Confirma .is-active na foto visível antes de soltar a pausa explícita.
+      // .is-paused / :focus-within continuam a segurar essa foto até ao fim
+      // deste turno; .is-playing só passa a animar quando .is-paused sai.
       syncActiveFromVisibility();
       alignDelays();
-      restartAligned();
+      root.classList.add('is-playing');
       root.classList.remove('is-paused');
       setPauseUi(false);
+    }
+
+    function focusInside(target) {
+      return !!(target && root.contains(target));
     }
 
     // Durante o ciclo automático, mantém .is-active na foto mais visível
     // (preserva a correta ao entrar com mouse/teclado antes de qualquer clique).
     window.setInterval(function () {
       if (root.classList.contains('is-paused')) return;
-      if (root.matches(':hover') || root.classList.contains('is-holding')) return;
+      if (root.matches(':hover')) return;
+      if (root.matches(':focus-within') && !root.classList.contains('is-playing')) return;
       syncActiveFromVisibility();
     }, 200);
 
@@ -144,7 +141,17 @@
       syncActiveFromVisibility();
       alignDelays();
     });
-    root.addEventListener('focusin', syncActiveFromVisibility);
+    root.addEventListener('focusin', function (e) {
+      if (focusInside(e.relatedTarget)) return;
+      syncActiveFromVisibility();
+      alignDelays();
+      root.classList.remove('is-playing');
+    });
+    root.addEventListener('focusout', function (e) {
+      if (focusInside(e.relatedTarget)) return;
+      root.classList.remove('is-playing');
+      if (!root.classList.contains('is-paused')) alignDelays();
+    });
 
     btnPause.addEventListener('click', function () {
       if (root.classList.contains('is-paused')) {

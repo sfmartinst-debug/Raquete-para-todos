@@ -15,8 +15,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('raquete-child', get_stylesheet_uri(), ['raquete-iris-tl'], '0.4.12');
     wp_enqueue_style('raquete-iris-h1', get_stylesheet_directory_uri() . '/assets/iris-h1-mobile.css', ['raquete-child'], '0.4.4');
     wp_enqueue_style('raquete-iris-contraste', get_stylesheet_directory_uri() . '/assets/iris-contraste-faixas.css', ['raquete-child','raquete-iris-h1'], '0.4.4');
-    wp_enqueue_style('raquete-iris-fotos', get_stylesheet_directory_uri() . '/assets/iris-hero-fotos.css', ['raquete-child','raquete-iris-contraste'], '0.4.12');
-    wp_enqueue_script('raquete-iris-fotos', get_stylesheet_directory_uri() . '/assets/iris-hero-fotos.js', [], '0.4.12', true);
+    wp_enqueue_style('raquete-iris-fotos', get_stylesheet_directory_uri() . '/assets/iris-hero-fotos.css', ['raquete-child','raquete-iris-contraste'], '0.4.13');
+    wp_enqueue_script('raquete-iris-fotos', get_stylesheet_directory_uri() . '/assets/iris-hero-fotos.js', [], '0.4.13', true);
 });
 
 /* Links e arquivos do tema eram absolutos na raiz do domínio (/o-projeto/,

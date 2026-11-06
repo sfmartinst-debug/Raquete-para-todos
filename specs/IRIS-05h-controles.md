@@ -19,4 +19,6 @@ A correção de imagem em branco não foi substituída. Com hover, foco, pausa o
 
 Legendas e `alt` aprovados, o H1 `Projeto Raquete para Todos`, `prefers-reduced-motion` (controles ocultos e o script não inicia), `noindex, nofollow` e `Disallow: /` permanecem.
 
-O ciclo manual é alunos → Guga → alunos. Pausar e retomar não tira o foco do botão. O mouse sobre o bloco para a animação na foto ativa.
+O ciclo manual é alunos → Guga → alunos. Pausar e retomar não tiram o foco do botão. O mouse sobre o bloco para a animação na foto ativa.
+
+Entrar no carrossel com o teclado também para a troca (`:focus-within`), sem mudar o nome do botão: continua `Pausar` (`aria-pressed=false`), porque a pausa é automática e solta ao sair do foco. `Retomar` (`aria-pressed=true`) só aparece na pausa explícita e permanece depois que o foco sai. `Retomar` com o foco ainda no botão volta a animar (classe `is-playing`); a rede `.is-active` do 05g segura a foto nesse instante, sem quadro em branco. Sair e entrar de novo no foco repõe a pausa automática.

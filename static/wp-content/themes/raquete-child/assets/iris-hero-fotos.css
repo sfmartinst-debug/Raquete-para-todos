@@ -95,25 +95,30 @@
   }
   /* IRIS-05g + BASTION: estados parados mostram só .is-active;
      reserva first-child se nenhuma figura estiver ativa.
-     .is-holding usa a mesma rede ao reiniciar a animação.
-     :focus-within não entra aqui: Pausar/Retomar precisa continuar
-     com o foco no botão. O hover e .is-paused seguem parando a troca. */
-  .rq-hero-fotos:is(:hover, .is-paused, .is-holding) figure {
+     :focus-within é a pausa automática ao entrar com o teclado. */
+  .rq-hero-fotos:is(:hover, :focus-within, .is-paused) figure {
     animation: none;
     opacity: 0;
     pointer-events: none;
   }
-  .rq-hero-fotos:is(:hover, .is-paused, .is-holding) figure:first-child {
+  .rq-hero-fotos:is(:hover, :focus-within, .is-paused) figure:first-child {
     opacity: 1;
     pointer-events: auto;
   }
-  .rq-hero-fotos:is(:hover, .is-paused, .is-holding) figure.is-active {
+  .rq-hero-fotos:is(:hover, :focus-within, .is-paused) figure.is-active {
     opacity: 1;
     pointer-events: auto;
   }
-  .rq-hero-fotos:is(:hover, .is-paused, .is-holding):has(figure.is-active) figure:first-child:not(.is-active) {
+  .rq-hero-fotos:is(:hover, :focus-within, .is-paused):has(figure.is-active) figure:first-child:not(.is-active) {
     opacity: 0;
     pointer-events: none;
+  }
+  /* Retomar explícito com o foco ainda no botão: o ciclo corre de novo.
+     Sem isto, :focus-within deixaria a foto parada e o nome "Pausar" mentiria.
+     Hover e pausa explícita continuam vencendo. Enquanto a animação não corre,
+     a opacidade do 05g segura .is-active, então não há quadro vazio. */
+  .rq-hero-fotos.is-playing:not(:hover):not(.is-paused) figure {
+    animation: rq-foto-alterna 12s infinite;
   }
 }
 @keyframes rq-foto-alterna {

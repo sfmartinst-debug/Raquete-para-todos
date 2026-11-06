@@ -1,0 +1,9 @@
+<?php
+/**
+ * Title: Linha do tempo de eventos solidários
+ * Slug: raquete/linha-do-tempo-eventos
+ * Categories: raquete
+ * Description: Eventos com data e fonte.
+ */
+?>
+<!-- wp:group {"tagName":"section","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"backgroundColor":"branco","layout":{"type":"constrained"}} --><section class="wp-block-group alignfull has-branco-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:group {"align":"wide","layout":{"type":"default"}} --><div class="wp-block-group alignwide"><!-- wp:heading {"level":2} --><h2 class="wp-block-heading">Torneios solidários</h2><!-- /wp:heading --><!-- wp:html --><ol class="rpt-timeline"><li><span class="ano">Novembro e dezembro de 2024</span><h3 class="rq-tl-title">1º Torneio “Grand Slam” beneficente</h3><p>Torneio no então CLT, hoje Parque da Cidade – Ayrton Senna da Silva, que arrecadou mais de 160 kg de alimentos para o Fundo Social de Solidariedade de Valinhos.</p><p class="fonte">Fonte: <a href="https://www.valinhos.sp.gov.br/portal/noticias/0/3/57096/projeto-raquete-para-todos-arrecada-mais-de-160-kg-de-alimentos-em-prol-do-fundo-social" rel="noopener">Prefeitura de Valinhos, 09/01/2025</a>.</p></li><li><span class="ano">12 e 13 de abril de 2025</span><h3 class="rq-tl-title">II Torneio 24 Horas de Tênis Beneficente</h3><p>Durante 24 horas ininterruptas, 96 tenistas do projeto se revezaram em jogos de duplas no então CLT, hoje Parque da Cidade – Ayrton Senna da Silva, com doações da comunidade.</p><p class="fonte">Fonte: <a href="https://www.valinhos.sp.gov.br/portal/noticias/0/3/57570/24-horas-de-tenis-do-clt-une-esporte-e-solidariedade-em-grande-evento-em-valinhos" rel="noopener">Prefeitura de Valinhos, abr/2025</a>.</p></li></ol><!-- /wp:html --></div><!-- /wp:group --></section><!-- /wp:group -->

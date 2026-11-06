@@ -1,0 +1,79 @@
+HANDOFF — Raquete para Todos (pacote local sanitizado para CloudAgent)
+Gerado: 2026-11-06 (America/Sao_Paulo)
+Destino autorizado pelo responsável: https://github.com/sfmartinst-debug/Raquete-para-todos
+Este arquivo NÃO implementa o repositório; apenas identifica o conteúdo empacotado.
+
+========================================================================
+1. CAMINHOS NO ARQUIVO
+========================================================================
+- static/                  Export HTML público atual (/home/box/raquete-wp/static)
+- theme/raquete-child/     Tema filho ATUAL em execução (/home/box/raquete-wp/site/wp-content/themes/raquete-child)
+- build/build-static.sh    Script de export estático atual
+- build/fix-static.py     Pós-processamento de links/ícone do export
+- docs/                    Docs úteis do repo local antigo (sem .git, sem evidências)
+- content/pages-public-meta.md  Metadados públicos derivados do static (sem usuários)
+- specs/IRIS-05-hero-fotos.md   Especificação IRIS-05 (design); ver também pendência 05h abaixo
+- HANDOFF.txt              Este arquivo
+
+NÃO incluídos (de propósito): .git, node_modules, wp-config.php, .env, backups/,
+bancos .sql, logs, credenciais, documentos de consentimento de imagem,
+evidências privadas da equipe, tema antigo em /repo/raquete-child (evita sobrescrever o atual),
+WXR antigo (pode carregar metadados de instalação; metadados públicos estão em content/).
+
+========================================================================
+2. ESTADO ESTÁVEL PUBLICADO (referência)
+========================================================================
+- Commit estável publicado/demo (referência ANVIL): a927154 (IRIS-05g)
+- Evidência local de registro: anvil/evidencias/hero-05g-20261106.txt (NÃO empacotada; evidência de equipe)
+- Tema preliminar empacotado: assets de hero enfileirados como v0.4.11
+  (style.css ainda declara Version: 0.4.4 no cabeçalho; functions.php usa 0.4.4 na maioria
+   dos CSS e 0.4.11 em iris-hero-fotos.css/js — NÃO alterado neste pacote)
+- robots.txt do static: Disallow: /
+- meta robots noindex,nofollow presente nas páginas do export e no functions.php (rascunho)
+
+========================================================================
+3. IRIS-05g A PRESERVAR (já no tema/static empacotados)
+========================================================================
+- Correção blank-image / estados parados com .is-active (05g)
+- Captions e alt das fotos do hero
+- prefers-reduced-motion (controles ocultos / JS early-return)
+- noindex / robots de rascunho
+
+========================================================================
+4. IRIS-05h — ESPECIFICAÇÃO OBRIGATÓRIA (AINDA NÃO IMPLEMENTADA / NÃO DEPLOYADA)
+========================================================================
+FATO: os ícones preliminares atuais NÃO atendem IRIS-05h e NÃO estão deployados
+como a especificação 05h. O pacote contém o estado preliminar (glyphs tipográficos
+‹ › Ⅱ em botões circulares no bloco .rq-hero-fotos__controles abaixo das fotos).
+
+Especificação 05h exigida (para implementação futura pelo CloudAgent / IRIS+ANVIL,
+NÃO feita neste pacote):
+- Setas SVG embutidas (embedded SVG arrows)
+- Botões circulares preto translúcido (translucent-black), 44px
+- Ícones brancos
+- Setas sobrepostas à esquerda/direita da foto (over left/right of photo)
+- Pause/play no canto inferior direito (bottom right)
+- Foco amarelo (yellow focus)
+- Dois dots passivos aria-hidden
+- Nomes acessíveis: "Foto anterior" / "Próxima foto" / "Pausar" → "Retomar"
+- Preservar correção 05g (blank-image), captions/alt, reduced-motion, noindex/robots
+
+STATUS: IRIS-05h = incompleto / preliminar / não deployado. Não tratar o estado
+atual dos controles como aceite de 05h.
+
+========================================================================
+5. DIREITOS DE IMAGEM — PENDENTE PARA LANÇAMENTO FINAL
+========================================================================
+As fotos públicas já usadas no demo estão incluídas (assets/img/foto no tema e no static).
+PENDÊNCIA: direitos/autorizações de imagem para o lançamento final permanecem
+PENDENTES de confirmação formal do responsável. Este pacote NÃO resolve nem
+declara direitos finais. Não inventar status de autorização.
+
+========================================================================
+6. REGRAS PARA O CLOUDAGENT
+========================================================================
+- Usar theme/raquete-child/ como fonte do tema (mais recente que qualquer cópia em docs/repo antigo).
+- Usar static/ como referência do export público atual.
+- Não republicar com indexação sem autorização humana (manter noindex até ordem).
+- Não publicar, alterar DNS, nem instalar extensões pagas sem autorização.
+- Não inventar clientes, números, depoimentos ou certificações.

@@ -1,0 +1,9 @@
+<?php
+/**
+ * Title: Formas de dar visibilidade à sua marca
+ * Slug: raquete/visibilidade
+ * Categories: raquete
+ * Description: Cards de visibilidade (ECHO v1.1), sem valores.
+ */
+?>
+<!-- wp:group {"tagName":"section","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}},"backgroundColor":"branco","layout":{"type":"constrained"}} --><section class="wp-block-group alignfull has-branco-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)"><!-- wp:group {"align":"wide","layout":{"type":"default"}} --><div class="wp-block-group alignwide"><!-- wp:heading {"level":2} --><h2 class="wp-block-heading">Formas de dar visibilidade à sua marca</h2><!-- /wp:heading --><!-- wp:paragraph {"className":"rq-aviso"} --><p class="rq-aviso">Exemplos ilustrativos. Formatos, contrapartidas e valores serão definidos com cada apoiador.</p><!-- /wp:paragraph --><!-- wp:html --><div class="rpt-impacto"><div class="card"><h3>Uniformes</h3><p>Sua marca nas camisetas usadas pelos alunos nas aulas e nos eventos.</p></div><div class="card"><h3>Eventos e torneios</h3><p>Presença em banners e na divulgação dos torneios beneficentes do projeto.</p></div><div class="card"><h3>Site do projeto</h3><p>Logo da empresa na página de apoiadores, com link para o seu site.</p></div><div class="card"><h3>Material de aula</h3><p>Apoio vinculado a raquetes, bolas e equipamentos entregues ao projeto.</p></div></div><!-- /wp:html --><!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( home_url( '/contato/' ) ); ?>">Quero conversar sobre patrocínio</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:group --></section><!-- /wp:group -->

@@ -1,0 +1,275 @@
+{
+  "$schema": "https://schemas.wp.org/wp/6.8/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "760px",
+      "wideSize": "1200px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        {
+          "slug": "verde",
+          "name": "Azul da marca (ex-verde)",
+          "color": "#3775C4"
+        },
+        {
+          "slug": "azul",
+          "name": "Azul do logo",
+          "color": "#3775C4"
+        },
+        {
+          "slug": "amarelo",
+          "name": "Amarelo bola",
+          "color": "#FFF200"
+        },
+        {
+          "slug": "azul-claro",
+          "name": "Azul claro camiseta",
+          "color": "#70CAE4"
+        },
+        {
+          "slug": "areia",
+          "name": "Fundo claro",
+          "color": "#EAF6FB"
+        },
+        {
+          "slug": "grafite",
+          "name": "Preto da marca",
+          "color": "#231F20"
+        },
+        {
+          "slug": "branco",
+          "name": "Branco",
+          "color": "#FFFFFF"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "slug": "inter",
+          "name": "Inter",
+          "fontFamily": "Inter, system-ui, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Inter",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/inter-400.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontWeight": "600",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/inter-600.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "montserrat",
+          "name": "Montserrat",
+          "fontFamily": "Montserrat, system-ui, sans-serif",
+          "fontFace": [
+            {
+              "fontFamily": "Montserrat",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/montserrat-700.woff2"
+              ]
+            },
+            {
+              "fontFamily": "Montserrat",
+              "fontWeight": "800",
+              "fontStyle": "normal",
+              "fontDisplay": "swap",
+              "src": [
+                "file:./assets/fonts/montserrat-800.woff2"
+              ]
+            }
+          ]
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "small",
+          "name": "P",
+          "size": "15px",
+          "fluid": false
+        },
+        {
+          "slug": "medium",
+          "name": "M",
+          "size": "18px",
+          "fluid": false
+        },
+        {
+          "slug": "large",
+          "name": "G",
+          "size": "22px",
+          "fluid": {
+            "min": "20px",
+            "max": "22px"
+          }
+        },
+        {
+          "slug": "x-large",
+          "name": "GG",
+          "size": "28px",
+          "fluid": {
+            "min": "24px",
+            "max": "28px"
+          }
+        },
+        {
+          "slug": "xx-large",
+          "name": "XG",
+          "size": "36px",
+          "fluid": {
+            "min": "28px",
+            "max": "36px"
+          }
+        },
+        {
+          "slug": "hero",
+          "name": "Hero",
+          "size": "48px",
+          "fluid": {
+            "min": "32px",
+            "max": "48px"
+          }
+        }
+      ]
+    },
+    "spacing": {
+      "defaultSpacingSizes": false,
+      "spacingSizes": [
+        {
+          "slug": "20",
+          "name": "8",
+          "size": "8px"
+        },
+        {
+          "slug": "30",
+          "name": "16",
+          "size": "16px"
+        },
+        {
+          "slug": "40",
+          "name": "24",
+          "size": "24px"
+        },
+        {
+          "slug": "50",
+          "name": "40",
+          "size": "clamp(24px,4vw,40px)"
+        },
+        {
+          "slug": "60",
+          "name": "64",
+          "size": "clamp(40px,6vw,64px)"
+        },
+        {
+          "slug": "70",
+          "name": "96",
+          "size": "clamp(56px,8vw,96px)"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var:preset|color|branco",
+      "text": "var:preset|color|grafite"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|inter",
+      "fontSize": "var:preset|font-size|medium",
+      "lineHeight": "1.6"
+    },
+    "spacing": {
+      "blockGap": "24px",
+      "padding": {
+        "left": "20px",
+        "right": "20px"
+      }
+    },
+    "elements": {
+      "heading": {
+        "color": {
+          "text": "var:preset|color|grafite"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|montserrat",
+          "fontWeight": "700",
+          "lineHeight": "1.2"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontSize": "var:preset|font-size|hero",
+          "fontWeight": "800"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var:preset|font-size|xx-large"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var:preset|font-size|large"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "var:preset|color|azul"
+        }
+      },
+      "button": {
+        "color": {
+          "background": "var:preset|color|amarelo",
+          "text": "var:preset|color|grafite"
+        },
+        "border": {
+          "radius": "12px"
+        },
+        "typography": {
+          "fontFamily": "var:preset|font-family|montserrat",
+          "fontWeight": "700",
+          "fontSize": "17px"
+        },
+        "spacing": {
+          "padding": {
+            "top": "14px",
+            "bottom": "14px",
+            "left": "24px",
+            "right": "24px"
+          }
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "area": "footer"
+    }
+  ]
+}

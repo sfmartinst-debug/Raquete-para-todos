@@ -1,0 +1,9 @@
+.credenciais*
+.acesso*
+wp-config.php
+*.sqlite
+*.sql
+backups/
+node_modules/
+.env
+.env.*

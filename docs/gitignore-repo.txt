@@ -1,0 +1,6 @@
+.credenciais*
+.acesso*
+wp-config.php
+*.sqlite
+backups/
+node_modules/
